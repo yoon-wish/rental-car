@@ -25,4 +25,14 @@
 		<servlet-name>footer</servlet-name>
 		<url-pattern>/footer</url-pattern>
 	</servlet-mapping>
+	
+	  	<servlet>
+		<servlet-name>homeForm</servlet-name>
+		<jsp-file>/views/common/homeForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>homeForm</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
 </web-app>
