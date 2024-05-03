@@ -19,19 +19,19 @@
       <div id='container'>
       
       	<div id='head'>
-      		<div>
-      			<img src="https://cdn-icons-png.flaticon.com/128/6015/6015831.png">
-      			<p>WISH</p>
-      		</div>
-      		<button>로그인</button>
+       		<div id='sub-head'>
+      			<!-- <img src="https://cdn-icons-png.flaticon.com/128/6015/6015831.png">
+      			<a href='/home'>WISH</a> -->
+      			<button id='loginout'>로그인</button>
+      		</div> 
       	</div>
     
     	<div id='title'>
-      		<h1>WISH RENTAL CAR</h1>
+      		<a href='/home'>WISH RENTAL CAR</a>
       	</div>
       	
       	<nav class="nav">
-  			<a href="/footer" class="nav-item" active-color='#526D82'>차량목록</a>
+  			<a href="/home" class="nav-item" active-color='#526D82'>차량목록</a>
   			<a href="#" class="nav-item" active-color='#526D82'>공지사항</a>
   			<a href="#" class="nav-item" active-color='#526D82'>게시판</a>
   			<a href="#" class="nav-item" active-color='#526D82'>마이페이지</a>
