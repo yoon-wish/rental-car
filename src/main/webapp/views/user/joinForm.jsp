@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h2>회원가입</h2>
-        <form action="/home" method="post">
+        <form action="/joinAction" method="post">
             <div>
                 <label for="id">아이디</label>
                 <input type="text" id="id" name="id">
@@ -43,11 +43,11 @@
             
             
             <div>
-                <label for="age">나이</label>
-                <input type="text" id="age" name="age">
+                <label for="age">생년월일</label>
+                <input type="date" id="birth" name="birth">
             </div>
             
-            <p class="error-msg" id="error-msg-age">* 나이: 필수 정보입니다.</p>
+            <p class="error-msg" id="error-msg-birth">* 생년월일: 필수 정보입니다.</p>
             
             <div>
                 <label for="telecom">통신사</label>
@@ -79,7 +79,7 @@
             
             <div id="license-year-container" style="display: none;">
                 <label for="license_year">면허증 취득년도</label>
-                <input type="number" id="license_year" name="license_year" min="1915" max="2024">
+                <input type=date id="license_year" name="license_year">
             </div>
             
             <div class="radio-container">

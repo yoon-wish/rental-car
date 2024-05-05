@@ -48,12 +48,12 @@ $(document).ready(() => {
 	$('#error-msg-password').hide();
 	$('#error-msg-email').hide();
 	$('#error-msg-name').hide();
-	$('#error-msg-age').hide();
+	$('#error-msg-birth').hide();
 	$('#error-msg-telecom').hide();
 	$('#error-msg-phone').hide();
 	$('#error-msg-license').hide();
 	$('#error-msg-agree').hide();
-	
+
 	$('#id').focusout(e => {
 		if ($('#id').val() === "") {
 			$('#error-msg-id').show();
@@ -98,14 +98,14 @@ $(document).ready(() => {
 		}
 	});
 
-	$('#age').focusout(e => {
-		if ($('#age').val() === "") {
-			$('#error-msg-age').show();
-			$('#age').css('border', 'solid 1px tomato');
+	$('#birth').focusout(e => {
+		if ($('#birth').val() === "") {
+			$('#error-msg-birth').show();
+			$('#birth').css('border', 'solid 1px tomato');
 		} else {
-			$('#error-msg-age').hide();
-			$('#age').css('border', 'solid 1px 9DB2BF');
-			$('#age').css('border-bottom', 'none');
+			$('#error-msg-birth').hide();
+			$('#birth').css('border', 'solid 1px 9DB2BF');
+			$('#birth').css('border-bottom', 'none');
 		}
 	});
 
@@ -201,10 +201,10 @@ $(document).ready(() => {
 			$('#error-msg-name').show();
 			$('#name').css('border', 'solid 1px tomato');
 		}
-		if (age === "") {
+		if (birth === "") {
 			isValid = false;
-			$('#error-msg-age').show();
-			$('#age').css('border', 'solid 1px tomato');
+			$('#error-msg-birth').show();
+			$('#birth').css('border', 'solid 1px tomato');
 		}
 		if (telecom === null) {
 			isValid = false;
