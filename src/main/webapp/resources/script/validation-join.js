@@ -169,7 +169,7 @@ $(document).ready(() => {
 		const email = $('#email').val();
 
 		const name = $('#name').val();
-		const age = $('#age').val();
+		const birth = $('#birth').val();
 		const telecom = $('#telecom').val();
 		const phone = $('#phone').val();
 
@@ -232,5 +232,6 @@ $(document).ready(() => {
 		if (isValid) {
 			e.target.submit();
 		}
+
 	});
 });

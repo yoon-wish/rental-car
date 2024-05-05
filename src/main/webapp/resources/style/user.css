@@ -137,7 +137,15 @@ button:hover {
 	margin-top: -10px;
 }
 
-#register>a {
+.container > #register>a {
 	text-decoration: none;
 	color: #526D82;;
+}
+
+.container > #buttonSet {
+	text-align: center;
+}
+
+.container > #buttonSet > button {
+	width: 180px;
 }

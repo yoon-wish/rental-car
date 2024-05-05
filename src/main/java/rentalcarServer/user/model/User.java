@@ -9,15 +9,15 @@ public class User {
 	private String birth;
 	private String telecom;
 	private String phone;
-	private boolean license;
+	private String license;
 	private String license_date;
 	private boolean agree;
-	private boolean admin;
+	private String admin;
 	private Timestamp regDate;
 	private Timestamp modDate;
 
-	public User(String id, String email, String name, String birth, String telecom, String phone, boolean license,
-			String license_date, boolean agree, boolean admin, Timestamp regDate, Timestamp modDate) {
+	public User(String id, String email, String name, String birth, String telecom, String phone, String license,
+			String license_date, boolean agree, String admin, Timestamp regDate, Timestamp modDate) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -57,7 +57,7 @@ public class User {
 		return phone;
 	}
 
-	public boolean isLicense() {
+	public String isLicense() {
 		return license;
 	}
 	
@@ -69,7 +69,7 @@ public class User {
 		return agree;
 	}
 
-	public boolean isAdmin() {
+	public String isAdmin() {
 		return admin;
 	}
 	

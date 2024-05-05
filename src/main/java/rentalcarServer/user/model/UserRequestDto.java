@@ -10,12 +10,16 @@ public class UserRequestDto {
 	private String birth;
 	private String telecom;
 	private String phone;
-	private boolean license;
+	private String license;
 	private String license_date;
 	private boolean agree;
-	private boolean admin;
+	private String admin;
 	private Timestamp regDate;
 	private Timestamp modDate;
+	
+	public UserRequestDto () {
+		
+	}
 	
 	public UserRequestDto(String id, String password, String email, String name, String birth, String telecom, String phone, String license,
 			String license_date, String agree, String admin) {
@@ -27,10 +31,10 @@ public class UserRequestDto {
 		this.birth = birth;
 		this.telecom = telecom;
 		this.phone = phone;
-		this.license  = license.equals("on") ? true : false;
+		this.license  = license;
 		this.license_date = license_date;
 		this.agree  = agree.equals("on") ? true : false;
-		this.admin  = admin.equals("on") ? true : false;
+		this.admin  = admin;
 	}
 
 	public UserRequestDto(String id, String password, String email, String name, String birth, String telecom, String phone, String license,
@@ -43,9 +47,9 @@ public class UserRequestDto {
 		this.birth = birth;
 		this.telecom = telecom;
 		this.phone = phone;
-		this.license  = license.equals("on") ? true : false;
+		this.license  = license;
 		this.agree  = agree.equals("on") ? true : false;
-		this.admin  = admin.equals("on") ? true : false;
+		this.admin  = admin;
 	}
 	
 	public String getId() {
@@ -104,27 +108,27 @@ public class UserRequestDto {
 		this.phone = phone;
 	}
 
-	public boolean isLicense() {
+	public String getLicense() {
 		return license;
 	}
 
-	public void setLicense(boolean license) {
+	public void setLicense(String license) {
 		this.license = license;
 	}
 	
-	public String getLicenseDate() {
+	public String getLicense_date() {
 		return license_date;
 	}
 	
-	public void setLicenseDate(String license_date) {
+	public void setLicense_date(String license_date) {
 		this.license_date=license_date;
 	}
 
-	public boolean isAdmin() {
+	public String getAdmin() {
 		return admin;
 	}
 
-	public void setAdmin(boolean admin) {
+	public void setAdmin(String admin) {
 		this.admin = admin;
 	}
 

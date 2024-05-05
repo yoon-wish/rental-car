@@ -19,6 +19,7 @@
             </div>
             
             <p class="error-msg" id="error-msg-id">* 아이디: 필수 정보입니다.</p>
+            <p class="error-msg" id="error-msg-id-dupl">* 중복되는 아이디입니다.</p>
             
             <div>
                 <label for="password">비밀번호</label>
@@ -43,7 +44,7 @@
             
             
             <div>
-                <label for="age">생년월일</label>
+                <label for="birth">생년월일</label>
                 <input type="date" id="birth" name="birth">
             </div>
             
@@ -68,24 +69,25 @@
             
             <p class="error-msg" id="error-msg-phone">* 휴대폰번호: 필수 정보입니다.</p>
             
+            <label for="license">면허증</label>
             <div class="radio-container">
-                <input type="radio" id="license_yes" name="license" value="yes">
+                <input type="radio" id="license_yes" name="license" value="Y">
                 <label for="license_yes">보유</label>
-                <input type="radio" id="license_no" name="license" value="no">
+                <input type="radio" id="license_no" name="license" value="N">
                 <label for="license_no">미보유</label>
             </div>
             
             <p class="error-msg" id="error-msg-license">* 면허취득여부: 필수 정보입니다.</p>
             
             <div id="license-year-container" style="display: none;">
-                <label for="license_year">면허증 취득년도</label>
-                <input type=date id="license_year" name="license_year">
+                <label for="license_date">면허증 취득날짜</label>
+                <input type=date id="license_date" name="license_date">
             </div>
             
             <div class="radio-container">
-                <input type="radio" id="admin_yes" name="admin" value="yes">
+                <input type="radio" id="admin_yes" name="admin" value="Y">
                 <label for="admin_yes">관리자</label>
-                <input type="radio" id="admin_no" name="admin" value="no" checked>
+                <input type="radio" id="admin_no" name="admin" value="N" checked>
                 <label for="admin_no">일반회원</label>
             </div>
             
@@ -105,5 +107,6 @@
     </div>
 
     <script src="\resources\script\validation-join.js"></script>
+    <script src="\resources\script\validation-id.js"></script>
 </body>
 </html>

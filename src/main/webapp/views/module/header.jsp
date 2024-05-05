@@ -34,7 +34,7 @@
   			<a href="/home" class="nav-item" active-color='#526D82'>차량목록</a>
   			<a href="#" class="nav-item" active-color='#526D82'>공지사항</a>
   			<a href="#" class="nav-item" active-color='#526D82'>게시판</a>
-  			<a href="#" class="nav-item" active-color='#526D82'>마이페이지</a>
+  			<a href="/myPage" class="nav-item" active-color='#526D82'>마이페이지</a>
   			<span class="nav-indicator"></span>
 		</nav>
       

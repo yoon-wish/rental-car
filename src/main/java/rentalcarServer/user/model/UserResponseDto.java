@@ -8,13 +8,13 @@ public class UserResponseDto {
 	private String birth;
 	private String telecom;
 	private String phone;
-	private boolean license;
+	private String license;
 	private String license_date;
-	private boolean admin;
+	private String admin;
 	private boolean agree;
 	
-	public UserResponseDto(String id, String email, String name, String birth, String telecom, String phone, boolean license,
-			String license_date, boolean agree, boolean admin) {
+	public UserResponseDto(String id, String email, String name, String birth, String telecom, String phone, String license,
+			String license_date, boolean agree, String admin) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -89,27 +89,27 @@ public class UserResponseDto {
 		this.phone = phone;
 	}
 
-	public boolean isLicense() {
+	public String getLicense() {
 		return license;
 	}
 
-	public void setLicense(boolean license) {
+	public void setLicense(String license) {
 		this.license = license;
 	}
 
-	public String getLicenseDate() {
+	public String getLicense_date() {
 		return license_date;
 	}
 
-	public void setLicenseDate(String license_date) {
+	public void setLicense_date(String license_date) {
 		this.license_date = license_date;
 	}
 	
-	public boolean isAdmin() {
+	public String getAdmin() {
 		return admin;
 	}
 
-	public void setAdmin(boolean admin) {
+	public void setAdmin(String admin) {
 		this.admin = admin;
 	}
 
