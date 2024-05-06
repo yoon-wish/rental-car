@@ -52,6 +52,7 @@ $(document).ready(() => {
 	$('#error-msg-telecom').hide();
 	$('#error-msg-phone').hide();
 	$('#error-msg-license').hide();
+	$('#error-msg-admin-password').hide();
 	$('#error-msg-agree').hide();
 
 	$('#id').focusout(e => {
@@ -61,7 +62,6 @@ $(document).ready(() => {
 		} else {
 			$('#error-msg-id').hide();
 			$('#id').css('border', 'solid 1px #9DB2BF');
-			$('#id').css('border-bottom', 'none');
 		}
 	});
 
@@ -72,7 +72,6 @@ $(document).ready(() => {
 		} else {
 			$('#error-msg-password').hide();
 			$('#password').css('border', 'solid 1px #9DB2BF');
-			$('#password').css('border-bottom', 'none');
 		}
 	});
 
@@ -83,7 +82,6 @@ $(document).ready(() => {
 		} else {
 			$('#error-msg-email').hide();
 			$('#email').css('border', 'solid 1px #9DB2BF');
-			$('#email').css('border-bottom', 'none');
 		}
 	});
 
@@ -93,8 +91,7 @@ $(document).ready(() => {
 			$('#name').css('border', 'solid 1px tomato');
 		} else {
 			$('#error-msg-name').hide();
-			$('#name').css('border', 'solid 1px 9DB2BF');
-			$('#name').css('border-bottom', 'none');
+			$('#name').css('border', 'solid 1px #9DB2BF');
 		}
 	});
 
@@ -104,8 +101,7 @@ $(document).ready(() => {
 			$('#birth').css('border', 'solid 1px tomato');
 		} else {
 			$('#error-msg-birth').hide();
-			$('#birth').css('border', 'solid 1px 9DB2BF');
-			$('#birth').css('border-bottom', 'none');
+			$('#birth').css('border', 'solid 1px #9DB2BF');
 		}
 	});
 
@@ -115,8 +111,7 @@ $(document).ready(() => {
 			$('#telecom').css('border', 'solid 1px tomato');
 		} else {
 			$('#error-msg-telecom').hide();
-			$('#telecom').css('border', 'solid 1px 9DB2BF');
-			$('#telecom').css('border-bottom', 'none');
+			$('#telecom').css('border', 'solid 1px #9DB2BF');
 		}
 	});
 
@@ -126,7 +121,7 @@ $(document).ready(() => {
 			$('#phone').css('border', 'solid 1px tomato');
 		} else {
 			$('#error-msg-phone').hide();
-			$('#phone').css('border', 'solid 1px 9DB2BF');
+			$('#phone').css('border', 'solid 1px #9DB2BF');
 		}
 
 		const phone = $('#phone').val();
@@ -148,8 +143,17 @@ $(document).ready(() => {
 			$('#license').css('border', 'solid 1px tomato');
 		} else {
 			$('#error-msg-license').hide();
-			$('#license').css('border', 'solid 1px 9DB2BF');
-			$('#license').css('border-bottom', 'none');
+			$('#license').css('border', 'solid 1px #9DB2BF');
+		}
+	});
+
+	$('#admin-password').focusout(e => {
+		if ($('#admin-password').val() === null) {
+			$('#error-msg-admin-password').show();
+			$('#admin-password').css('border', 'solid 1px tomato');
+		} else {
+			$('#error-msg-admin-password').hide();
+			$('#admin-password').css('border', 'solid 1px #9DB2BF');
 		}
 	});
 
@@ -196,11 +200,13 @@ $(document).ready(() => {
 			$('#error-msg-email').show();
 			$('#email').css('border', 'solid 1px tomato');
 		}
+
 		if (name === "") {
 			isValid = false;
 			$('#error-msg-name').show();
-			$('#name').css('border', 'solid 1px tomato');
+			$('#name').css('border', 'solid 1px tomato'); 
 		}
+		
 		if (birth === "") {
 			isValid = false;
 			$('#error-msg-birth').show();
@@ -223,11 +229,27 @@ $(document).ready(() => {
 			$('#license_yes').css('border', 'solid 1px tomato');
 			$('#license_no').css('border', 'solid 1px tomato');
 		}
+		
 		if (!$('#agree').prop('checked')) {
 			isValid = false;
 			$('#error-msg-agree').show();
 			$('#agree-container').css('border', 'solid 1px tomato');
 		}
+
+
+		// 관리자 암호 추가 검사
+		if ($('#admin_yes').is(':checked')) {
+			const adminPassword = $('#admin_password').val();
+			if (adminPassword !== "1234") {
+				$('#error-msg-admin-password').show();
+				$('#admin_password').css('border', 'solid 1px tomato');
+				isValid = false;
+			} else {
+				$('#error-msg-admin-password').hide();
+				$('#admin-password').css('border', 'solid 1px 9DB2BF');
+			}
+		}
+
 
 		if (isValid) {
 			e.target.submit();

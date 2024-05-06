@@ -95,6 +95,9 @@
                 <label for="admin_password">관리자 암호</label>
                 <input type="password" id="admin_password" name="admin_password">
             </div>
+
+            <p class="error-msg" id="error-msg-admin-password">* 암호가 틀립니다.</p>
+           
             <div class="checkbox-container">
                 <input type="checkbox" id="agree" name="agree">
                 <label for="agree">약관에 동의합니다.</label>
