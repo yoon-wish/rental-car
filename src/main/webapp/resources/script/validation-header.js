@@ -39,5 +39,24 @@ function updateNav() {
 		if (elements.textContent.includes(clickedValue)) {
 			handleIndicator(elements);
 		}
-	});		
+	});
 }
+
+const loginBtn = document.getElementById('loginBtn');
+const logoutBtn = document.getElementById('logoutBtn');
+let form = document.getElementById('my-form');
+
+/*window.onload = function() {
+	const loggedInUser = sessionStorage.getItem('user'); // 'user' 키로부터 값 가져오기
+	if (loggedInUser !== null) {
+		// 로그인 상태인 경우
+		loginBtn.style.display = 'none';
+		logoutBtn.style.display = 'block';
+		form.action = "/logout";
+	} else {
+		// 로그아웃 상태인 경우
+		loginBtn.style.display = 'block';
+		logoutBtn.style.display = 'none';
+		form.action = "/login";
+	}
+}*/

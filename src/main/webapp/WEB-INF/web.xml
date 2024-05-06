@@ -11,6 +11,15 @@
 	<!-- Servlet mapping -->
 
 	<servlet>
+		<servlet-name>LogoutFormAction</servlet-name>
+		<servlet-class>rentalcarServer.user.controller.LogoutFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutFormAction</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>DeleteUserFormAction</servlet-name>
 		<servlet-class>rentalcarServer.user.controller.DeleteUserFormAction</servlet-class>
 	</servlet>
