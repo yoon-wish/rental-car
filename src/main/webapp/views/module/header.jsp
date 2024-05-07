@@ -33,11 +33,11 @@
 
 
 			<div id='title'>
-				<a href='/home'>WISH RENTAL CAR</a>
+				<a href='/main?page=1'>WISH RENTAL CAR</a>
 			</div>
 
 			<nav class="nav">
-				<a href="/home" class="nav-item" active-color='#526D82'>차량목록</a> <a
+				<a href="#" class="nav-item" active-color='#526D82'>차량목록</a> <a
 					href="/noticeAction" class="nav-item" active-color='#526D82'>공지사항</a> <a
 					href="/boardAction" class="nav-item" active-color='#526D82'>게시판</a> <a
 					href="/myPageMain" class="nav-item" active-color='#526D82'>마이페이지</a> <span

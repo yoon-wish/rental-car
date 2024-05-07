@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+ .car-info-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .car-image {
+        flex: 0 0 30%; /* 이미지 영역의 너비 설정 */
+        margin-right: 20px; /* 이미지와 내용 사이의 간격 설정 */
+    }
+
+    .car-details {
+        flex: 1; /* 내용 영역이 이미지 영역의 나머지를 차지하도록 설정 */
+    }
