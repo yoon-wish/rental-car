@@ -58,6 +58,34 @@ public class BoardDao {
 
     }
 	
+	public List<BoardResponseDto> findNoticeAll(){
+        List<BoardResponseDto> list = new ArrayList<BoardResponseDto>();
+        conn = DBManager.getConnection();
+        String sql = "SELECT id, num, title, content, notice, reg_date FROM board WHERE notice = 'Y'";
+        try {
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while(rs.next()) {
+            	String id = rs.getString(1);
+                int num = rs.getInt(2);
+                String title = rs.getString(3);
+                String content = rs.getString(4);
+                String notice = rs.getString(5);
+                Timestamp reg_date = rs.getTimestamp(6);
+                BoardResponseDto board = new BoardResponseDto(id, num, title, content, notice, reg_date);
+                list.add(board);
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }finally {
+            DBManager.close(conn, pstmt, rs);
+        }
+
+        return list;
+
+    }
+	
 	public Board findBoardByNum(int num) {
 		Board board = null;
 		

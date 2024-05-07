@@ -7,9 +7,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import rentalcarServer.board.model.Board;
 import rentalcarServer.board.model.BoardDao;
+import rentalcarServer.user.model.UserResponseDto;
 
 /**
  * Servlet implementation class DeleteBoardAction
@@ -30,18 +32,24 @@ public class DeleteBoardAction extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String num = request.getParameter("num");
+		
 		BoardDao dao = new BoardDao();
-		
-		System.out.println("numnum: " + num);
 		Board board = dao.findBoardByNum(Integer.parseInt(num));
-		
 		BoardDao boardDao = BoardDao.getInstance();
+		
+		HttpSession session = request.getSession(true);
+		UserResponseDto userDto = (UserResponseDto) session.getAttribute("user");
+		String notice = userDto.getAdmin();
 		
 		boolean result = boardDao.deleteBoard(board);
 		
 		if(result) {
 			System.out.println("삭제완료");
-			response.sendRedirect("/home");
+			if (notice.equals("N")) {
+				response.sendRedirect("/boardAction");
+			} else {
+				response.sendRedirect("/noticeAction");
+			}
 		} else {
 			System.out.println("삭제실패");
 			PrintWriter writer = response.getWriter();

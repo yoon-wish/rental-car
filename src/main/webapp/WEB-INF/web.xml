@@ -11,6 +11,15 @@
 	<!-- Servlet mapping -->
 
 	<servlet>
+		<servlet-name>NoticeAllFormAction</servlet-name>
+		<servlet-class>rentalcarServer.board.controller.NoticeAllFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NoticeAllFormAction</servlet-name>
+		<url-pattern>/noticeAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>UpdateBoardFormAction</servlet-name>
 		<servlet-class>rentalcarServer.board.controller.UpdateBoardFormAction</servlet-class>
 	</servlet>
@@ -228,6 +237,24 @@
 	<servlet-mapping>
 		<servlet-name>updateBoardForm</servlet-name>
 		<url-pattern>/updateBoard</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myPageMain</servlet-name>
+		<jsp-file>/views/user/myPageMain.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myPageMain</servlet-name>
+		<url-pattern>/myPageMain</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>noticeForm</servlet-name>
+		<jsp-file>/views/board/noticeForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>noticeForm</servlet-name>
+		<url-pattern>/notice</url-pattern>
 	</servlet-mapping>
 
 </web-app>

@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="container">
-		<h2>자유게시판</h2>
+		<h2>공지사항</h2>
 		<div class="board-form">
 			<table class="board-table">
 				<thead>
@@ -37,11 +37,10 @@
 			</table>
 		</div>
 
-
 		<c:choose>
 			<c:when test="${not empty user}">
-				<c:if test="${user.admin eq 'N'}">
-				<button type="submit" onclick="window.location.href='/write'">작성</button>
+				<c:if test="${user.admin eq 'Y'}">
+					<button type="submit" onclick="window.location.href='/write'">작성</button>
 				</c:if>
 			</c:when>
 		</c:choose>

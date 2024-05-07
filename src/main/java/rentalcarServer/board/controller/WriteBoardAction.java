@@ -48,7 +48,7 @@ public class WriteBoardAction extends HttpServlet {
 		HttpSession session = request.getSession(true);
 
 		UserResponseDto userDto = (UserResponseDto) session.getAttribute("user");
-		
+
 		String id = userDto.getId();
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
@@ -65,7 +65,7 @@ public class WriteBoardAction extends HttpServlet {
 		System.out.println(id);
 		if (isValid) {
 			BoardResponseDto boardDto = new BoardResponseDto(id, title, content, notice);
-			
+
 			BoardDao boardDao = new BoardDao();
 			BoardResponseDto board = boardDao.createBoard(boardDto);
 
@@ -77,7 +77,11 @@ public class WriteBoardAction extends HttpServlet {
 				// 성공
 //				session.setAttribute("board" + board.getNum(), board);
 				System.out.println("게시글이 성공적으로 생성되었습니다.");
-				response.sendRedirect("/boardAction");
+				if (notice.equals("N")) {
+					response.sendRedirect("/boardAction");
+				} else {
+					response.sendRedirect("/noticeAction");
+				}
 			}
 		} else
 			response.sendRedirect("/board");
