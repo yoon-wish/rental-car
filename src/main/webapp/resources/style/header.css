@@ -42,6 +42,7 @@ img {
 } */
 
 #title {
+/* 	position: relative; */
 	text-align: center;
 }
 
@@ -63,7 +64,8 @@ img {
     display: block;
     height: 3px;
     width: 75px;
-    margin-left: 555px;
+    position: absolute; /* 부모 요소에 대해 절대 위치를 사용합니다. */
+    left: 730px; /* 필요한 만큼 왼쪽으로 이동합니다. */
 }
 
 #title > a:after {
@@ -72,7 +74,8 @@ img {
     display: block;
     height: 3px;
     width: 75px;
-    margin-left: 750px;
+    position: absolute; /* 부모 요소에 대해 절대 위치를 사용합니다. */
+    left: 925px; /* 필요한 만큼 왼쪽으로 이동합니다. */
 }
 
 .nav {

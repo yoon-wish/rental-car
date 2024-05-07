@@ -15,9 +15,13 @@
 		<h2>공지사항</h2>
 		<div class="board-form">
 			<table class="board-table">
+				<colgroup>
+					<col width="25%" />
+					<col width="15%" />
+					<col width="20%" />
+				</colgroup>
 				<thead>
 					<tr>
-						<th>글 번 호</th>
 						<th>제 목</th>
 						<th>글 쓴 이</th>
 						<th>작성시간</th>
@@ -26,7 +30,6 @@
 				<tbody>
 					<c:forEach var="board" items="${boardList}">
 						<tr>
-							<td>${board.num}</td>
 							<td><a href="/readAction?num=${board.num}">${board.title}</a></td>
 							<td>${board.id}</td>
 							<td><fmt:formatDate value="${board.reg_date}"
