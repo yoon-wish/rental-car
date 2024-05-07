@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap')
+	;
+
+* {
+	font-family: "IBM Plex Sans KR", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	background-color: #f9f9f9;
+}
+
+
+.container {
+	margin : 50px auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: 50px auto;
+	width: 600px;
+}
+
+table, td, th {
+  border : 1px solid black;
+  border-collapse : collapse;
+};
+
+.board-form {
+	display: flex;
+	justify-content: space-between;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+	color: #526D82;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="number"],
+	input[type="date"], select {
+	width: calc(100% - 22px);
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #9DB2BF;
+	border-radius: 5px;
+}
+
+button {
+	background-color: #526D82;
+	color: #ffffff;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #405A70;
+}
+
+/* 가입하기 버튼 호버 효과 */
+.container button[type="submit"]:hover {
+	background-color: #27374D;
+}
+
+.container p {
+	color: tomato;
+	margin-top: -10px;
+}
+
+.container>#register>a {
+	text-decoration: none;
+	color: #526D82;;
+}

@@ -139,7 +139,7 @@ button:hover {
 
 .container > #register>a {
 	text-decoration: none;
-	color: #526D82;;
+	color: #526D82;
 }
 
 .container > #buttonSet {
@@ -148,4 +148,8 @@ button:hover {
 
 .container > #buttonSet > button {
 	width: 180px;
+}
+
+.board-form {
+	justify-content: space-between;
 }

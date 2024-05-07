@@ -17,7 +17,7 @@ public class UserDao {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 
-	private UserDao() {
+	public UserDao() {
 	}
 
 	private static UserDao instance = new UserDao();
@@ -105,7 +105,7 @@ public class UserDao {
 	}
 	
 	
-	private User findUserById(String id) {
+	public User findUserById(String id) {
 		User user = null;
 		
 		try {
