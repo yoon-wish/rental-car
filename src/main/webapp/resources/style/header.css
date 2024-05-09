@@ -32,15 +32,6 @@ img {
 		float: right;
 }   
 
-/* #sub-head > a {
-	font-family: "Bebas Neue", sans-serif;
-	text-decoration: none;
-	color: #526D82;;
-	font-weight: bold;
-	font-size: 20px;
-	letter-spacing: 1px;
-} */
-
 #title {
 /* 	position: relative; */
 	text-align: center;
@@ -58,24 +49,8 @@ img {
   padding-bottom:13px;  
 }
 
-#title > a:before {
-    background-color: #526D82;
-    content: '';
-    display: block;
-    height: 3px;
-    width: 75px;
-    position: absolute; /* 부모 요소에 대해 절대 위치를 사용합니다. */
-    left: 730px; /* 필요한 만큼 왼쪽으로 이동합니다. */
-}
-
-#title > a:after {
-    background-color: #526D82;
-    content: '';
-    display: block;
-    height: 3px;
-    width: 75px;
-    position: absolute; /* 부모 요소에 대해 절대 위치를 사용합니다. */
-    left: 925px; /* 필요한 만큼 왼쪽으로 이동합니다. */
+#title{
+	border-bottom: 1px solid #526D82; 
 }
 
 .nav {
@@ -132,7 +107,7 @@ img {
 	border-radius: 8px 8px 0 0;
 }
 
-button {
+#sub-head > button {
 	background-color: white;
 	border: none;
 	color: #526D82;

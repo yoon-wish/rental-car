@@ -60,3 +60,15 @@ let form = document.getElementById('my-form');
 		form.action = "/login";
 	}
 }*/
+
+let clear = document.getElementById('clear');
+clear.addEventListener('click', clearValues);
+
+function clearValues() {
+    start.value = '';
+    end.value = '';
+    
+    // 로컬 스토리지에서도 값을 지움.
+    localStorage.removeItem('startValue');
+    localStorage.removeItem('endValue');
+}

@@ -19,6 +19,18 @@
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.container input[type="submit"] {
+	width: 100px;
+	height: 45px;
+	padding: 10px;
+	background-color: #526D82;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
 img {
 	width: 300px;
 	height: 200px;

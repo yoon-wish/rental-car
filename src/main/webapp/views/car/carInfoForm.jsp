@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html>
 <html>
@@ -11,32 +10,45 @@
 <link rel="stylesheet" href="/resources/style/car.css">
 </head>
 <body>
-<div class="car-info-container">
+	<div class="container">
 
-    <div class="car-image">
-        <img src="car_image.jpg" alt="차 이미지" width="200" height="150">
-    </div>
+		<form action="/reserveCarAction" method="POST">
 
-
-    <div class="car-details">
-
-        <h2>차 이름: 차 모델명</h2>
+			<div>
+				<img src="${car.car_img }">
+			</div>
 
 
-        <p>브랜드: 차 브랜드</p>
+			<div class="car-details">
 
-        <p>사이즈: 차 크기</p>
+				<h2>${car.car_brand }${car.car_name }</h2>
 
-        <p>차종: 국내차</p>
+				<h2>${car.price }</h2>
 
-        <p>년도: 2024년식</p>
+				<p>${car.size }</p>
 
-        <p>연료: 가솔린</p>
+				<p>${car.year }년형|${car.fuel }</p>
 
-        <p>나이 제한: 21세 이상</p>
+				<p>${car.limit_age }세이상| 면허 취득 ${car.limit_period }년 이상</p>
+	
+				<input type="hidden" id="car_num" name="car_num" value="${car.car_num }">
 
-        <p>면허 취득 기한: 2022년 12월 31일까지</p>
-    </div>
-</div>
+				<div class='car-reservation'>
+					<label for="start">대여일</label> <input type="date" id="start"
+						name="start"> <label for="end">반납일</label> <input
+						type="date" id="end" name="end">
+				</div>
+			</div>
+
+			<c:choose>
+				<c:when test="${not empty user }">
+					<input type='submit' value="예약하기">
+				</c:when>
+
+			</c:choose>
+		</form>
+	</div>
+	<script src="\resources\script\validation-home.js"></script>
+
 </body>
 </html>

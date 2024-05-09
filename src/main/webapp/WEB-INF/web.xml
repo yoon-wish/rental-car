@@ -10,6 +10,25 @@
 
 	<!-- Servlet mapping -->
 
+
+	<servlet>
+		<servlet-name>ReadCarByBrandByAction</servlet-name>
+		<servlet-class>rentalcarServer.car.controller.ReadCarByBrandByAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReadCarByBrandByAction</servlet-name>
+		<url-pattern>/readCarByBrand</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReserveCarAction</servlet-name>
+		<servlet-class>rentalcarServer.reserve.controller.ReserveCarAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReserveCarAction</servlet-name>
+		<url-pattern>/reserveCarAction</url-pattern>
+	</servlet-mapping>
+
 	<servlet>
 		<servlet-name>ReadCarAction</servlet-name>
 		<servlet-class>rentalcarServer.car.controller.ReadCarAction</servlet-class>
@@ -18,7 +37,7 @@
 		<servlet-name>ReadCarAction</servlet-name>
 		<url-pattern>/readCarAction</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>CarAllFormAction</servlet-name>
 		<servlet-class>rentalcarServer.car.controller.CarAllFormAction</servlet-class>
@@ -27,7 +46,7 @@
 		<servlet-name>CarAllFormAction</servlet-name>
 		<url-pattern>/main</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>NoticeAllFormAction</servlet-name>
 		<servlet-class>rentalcarServer.board.controller.NoticeAllFormAction</servlet-class>
@@ -36,7 +55,7 @@
 		<servlet-name>NoticeAllFormAction</servlet-name>
 		<url-pattern>/noticeAction</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>UpdateBoardFormAction</servlet-name>
 		<servlet-class>rentalcarServer.board.controller.UpdateBoardFormAction</servlet-class>
@@ -45,7 +64,7 @@
 		<servlet-name>UpdateBoardFormAction</servlet-name>
 		<url-pattern>/updateBoardFormAction</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>DeleteBoardAction</servlet-name>
 		<servlet-class>rentalcarServer.board.controller.DeleteBoardAction</servlet-class>
@@ -54,7 +73,7 @@
 		<servlet-name>DeleteBoardAction</servlet-name>
 		<url-pattern>/deleteBoard</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>UpdateBoardAction</servlet-name>
 		<servlet-class>rentalcarServer.board.controller.UpdateBoardAction</servlet-class>
@@ -63,7 +82,7 @@
 		<servlet-name>UpdateBoardAction</servlet-name>
 		<url-pattern>/updateBoardAction</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>ReadBoardAction</servlet-name>
 		<servlet-class>rentalcarServer.board.controller.ReadBoardAction</servlet-class>
@@ -247,7 +266,7 @@
 		<servlet-name>detailForm</servlet-name>
 		<url-pattern>/detail</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>updateBoardForm</servlet-name>
 		<jsp-file>/views/board/updateBoardForm.jsp</jsp-file>
@@ -256,7 +275,7 @@
 		<servlet-name>updateBoardForm</servlet-name>
 		<url-pattern>/updateBoard</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>myPageMain</servlet-name>
 		<jsp-file>/views/user/myPageMain.jsp</jsp-file>
@@ -265,8 +284,8 @@
 		<servlet-name>myPageMain</servlet-name>
 		<url-pattern>/myPageMain</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
+
+	<servlet>
 		<servlet-name>noticeForm</servlet-name>
 		<jsp-file>/views/board/noticeForm.jsp</jsp-file>
 	</servlet>
@@ -274,8 +293,8 @@
 		<servlet-name>noticeForm</servlet-name>
 		<url-pattern>/notice</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
+
+	<servlet>
 		<servlet-name>carInfoForm</servlet-name>
 		<jsp-file>/views/car/carInfoForm.jsp</jsp-file>
 	</servlet>
@@ -283,5 +302,64 @@
 		<servlet-name>carInfoForm</servlet-name>
 		<url-pattern>/carInfo</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>carMainForm</servlet-name>
+		<jsp-file>/views/car/carMainForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>carMainForm</servlet-name>
+		<url-pattern>/carMain</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>carByBrandForm</servlet-name>
+		<jsp-file>/views/car/carByBrandForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>carByBrandForm</servlet-name>
+		<url-pattern>/brandForm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Bookable</servlet-name>
+		<jsp-file>/views/reserve/Bookable.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Bookable</servlet-name>
+		<url-pattern>/book</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LimitAge</servlet-name>
+		<jsp-file>/views/reserve/LimitAge.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LimitAge</servlet-name>
+		<url-pattern>/limitAge</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>LimitLicense</servlet-name>
+		<jsp-file>/views/reserve/LimitLicense.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LimitLicense</servlet-name>
+		<url-pattern>/limitLicense</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>LimitReserve</servlet-name>
+		<jsp-file>/views/reserve/LimitReserve.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LimitReserve</servlet-name>
+		<url-pattern>/limitReserve</url-pattern>
+	</servlet-mapping>
+	
+
+
+
+
 
 </web-app>

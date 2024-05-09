@@ -7,7 +7,7 @@ public class Car {
 	private String car_name;
 	private String car_brand;
 	private String car_img;
-	private String car_size;
+	private String size;
 	private int price;
 	private String country;
 	private int year;
@@ -17,7 +17,7 @@ public class Car {
 	private Timestamp reg_date;
 	private Timestamp mod_date;
 	
-	public Car(int car_num, String car_name, String car_brand, String car_img, String car_size,
+	public Car(int car_num, String car_name, String car_brand, String car_img, String size,
 			int price, String country, int year, String fuel, int limit_age, int limit_period,
 			Timestamp reg_date, Timestamp mod_date) {
 		super();
@@ -26,7 +26,7 @@ public class Car {
 		this.car_name = car_name;
 		this.car_brand = car_brand;
 		this.car_img = car_img;
-		this.car_size = car_size;
+		this.size = size;
 		this.price = price;
 		this.country = country;
 		this.year = year;
@@ -37,7 +37,7 @@ public class Car {
 		this.mod_date = mod_date;
 	}
 	
-	public Car(int car_num, String car_name, String car_brand, String car_img, String car_size,
+	public Car(int car_num, String car_name, String car_brand, String car_img, String size,
 			int price, String country, int year, String fuel, int limit_age, int limit_period) {
 		super();
 		
@@ -45,7 +45,7 @@ public class Car {
 		this.car_name = car_name;
 		this.car_brand = car_brand;
 		this.car_img = car_img;
-		this.car_size = car_size;
+		this.size = size;
 		this.price = price;
 		this.country = country;
 		this.year = year;
@@ -70,8 +70,8 @@ public class Car {
 		return car_img;
 	}
 
-	public String getCar_size() {
-		return car_size;
+	public String getSize() {
+		return size;
 	}
 
 	public int getPrice() {

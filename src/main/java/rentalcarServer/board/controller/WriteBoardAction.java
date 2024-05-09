@@ -75,7 +75,6 @@ public class WriteBoardAction extends HttpServlet {
 				response.sendRedirect("/board");
 			} else {
 				// 성공
-//				session.setAttribute("board" + board.getNum(), board);
 				System.out.println("게시글이 성공적으로 생성되었습니다.");
 				if (notice.equals("N")) {
 					response.sendRedirect("/boardAction");
