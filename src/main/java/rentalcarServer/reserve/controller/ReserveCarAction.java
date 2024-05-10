@@ -70,6 +70,7 @@ public class ReserveCarAction extends HttpServlet {
 		CarDao carDao = new CarDao();
 		
 		Car car = carDao.findCarByNum(Integer.parseInt(car_num));
+		session.setAttribute("car", car);
 		
 		// 나이 구하기
 		LocalDate birthDate = LocalDate.parse(birth);
@@ -81,7 +82,6 @@ public class ReserveCarAction extends HttpServlet {
 			return;
 		}
 		
-		System.out.println("??: " + license_date);
 		LocalDate licenseDate = LocalDate.parse(license_date);
 		int license = calculateYear(licenseDate, currentDate);
 		

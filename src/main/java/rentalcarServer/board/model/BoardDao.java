@@ -33,7 +33,7 @@ public class BoardDao {
 	public List<BoardResponseDto> findBoardAll(){
         List<BoardResponseDto> list = new ArrayList<BoardResponseDto>();
         conn = DBManager.getConnection();
-        String sql = "SELECT id, num, title, content, notice, reg_date FROM board WHERE notice = 'N'";
+        String sql = "SELECT id, num, title, content, notice, reg_date FROM board WHERE notice = 'N' ORDER BY reg_date DESC";
         try {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
@@ -61,7 +61,7 @@ public class BoardDao {
 	public List<BoardResponseDto> findNoticeAll(){
         List<BoardResponseDto> list = new ArrayList<BoardResponseDto>();
         conn = DBManager.getConnection();
-        String sql = "SELECT id, num, title, content, notice, reg_date FROM board WHERE notice = 'Y'";
+        String sql = "SELECT id, num, title, content, notice, reg_date FROM board WHERE notice = 'Y' ORDER BY reg_date DESC";
         try {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();

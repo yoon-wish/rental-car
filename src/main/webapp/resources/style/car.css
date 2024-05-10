@@ -46,7 +46,15 @@ img {
 	font-size: 16px;
 }
 
-.country>button {
+.button-container {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.country>button,
+.button-container > button {
 	width: 300px;
 	padding: 10px;
 	background-color: #526D82;
@@ -57,19 +65,11 @@ img {
 	font-size: 16px;
 }
 
-#local-detail1>button,
-#local-detail2>button,
-#local-detail3>button,
-#local-detail4>button,
-#local-detail5>button,
-#local-detail6>button,
-#foreign-detail1>button,
-#foreign-detail2>button,
-#foreign-detail3>button,
-#foreign-detail4>button,
-#foreign-detail5>button,
-#foreign-detail6>button
-{
+#local-detail1>button, #local-detail2>button, #local-detail3>button,
+	#local-detail4>button, #local-detail5>button, #local-detail6>button,
+	#foreign-detail1>button, #foreign-detail2>button, #foreign-detail3>button,
+	#foreign-detail4>button, #foreign-detail5>button, #foreign-detail6>button
+	{
 	width: 100px;
 	height: 100px;
 	border-radius: 70%;
@@ -78,42 +78,25 @@ img {
 	border: 1px solid #526D82;
 }
 
-#local-detail1>button>img,
-#local-detail2>button>img,
-#local-detail3>button>img,
-#local-detail4>button>img,
-#local-detail5>button>img,
-#local-detail6>button>img,
-#foreign-detail1>button>img,
-#foreign-detail2>button>img,
-#foreign-detail3>button>img,
-#foreign-detail4>button>img,
-#foreign-detail5>button>img,
-#foreign-detail6>button>img
- {
+#local-detail1>button>img, #local-detail2>button>img, #local-detail3>button>img,
+	#local-detail4>button>img, #local-detail5>button>img, #local-detail6>button>img,
+	#foreign-detail1>button>img, #foreign-detail2>button>img,
+	#foreign-detail3>button>img, #foreign-detail4>button>img,
+	#foreign-detail5>button>img, #foreign-detail6>button>img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
-#local-detail1,
-#local-detail2,
-#local-detail3,
-#local-detail4,
-#local-detail5,
-#local-detail6,
-#foreign-detail1,
-#foreign-detail2,
-#foreign-detail3,
-#foreign-detail4,
-#foreign-detail5,
-#foreign-detail6
-{
+#local-detail1, #local-detail2, #local-detail3, #local-detail4,
+	#local-detail5, #local-detail6, #foreign-detail1, #foreign-detail2,
+	#foreign-detail3, #foreign-detail4, #foreign-detail5, #foreign-detail6
+	{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	text-align:center;
+	text-align: center;
 }
 
 .container input[type="submit"]:hover {

@@ -12,9 +12,8 @@
 
 	<div class="container">
 		<div id=buttonSet>
-
 			<button type="submit" onclick="window.location.href='/myPage'">내정보</button>
-			<button type="submit" onclick="window.location.href='/'">예약내역</button>
+			<button type="submit" onclick="window.location.href='/reserveListAction?id=${user.id }'">예약내역</button>
 		</div>
 	</div>
 </body>

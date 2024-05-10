@@ -13,6 +13,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>${car.limit_age }세 이상 이용가능합니다.</h1>
+	<div class="container">
+		<h1>${car.limit_age }세 이상 이용가능합니다.</h1>
+	</div>
+	<div class="button-container">
+		<button onclick="window.location.href='/main?page=1'">홈으로</button>
+	</div>
 </body>
 </html>

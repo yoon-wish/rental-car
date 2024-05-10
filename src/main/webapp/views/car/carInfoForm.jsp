@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html>
@@ -21,9 +22,9 @@
 
 			<div class="car-details">
 
-				<h2>${car.car_brand }${car.car_name }</h2>
+				<h2>${car.car_brand } ${car.car_name }</h2>
 
-				<h2>${car.price }</h2>
+				<h2><fmt:formatNumber value="${car.price }" pattern="#,###" /></h2>
 
 				<p>${car.size }</p>
 

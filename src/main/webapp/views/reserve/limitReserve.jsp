@@ -13,6 +13,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>면허 취득 ${car.limit_period }년 이상 이용가능합니다.</h1>
+	<div class="container">
+		<h1>해당 날짜에 이미 예약된 차량입니다. 다른 날짜를 확인해주세요.</h1>
+	</div>
+	<div class="button-container">
+		<button onclick="window.location.href='/main?page=1'">홈으로</button>
+	</div>
 </body>
 </html>

@@ -26,6 +26,47 @@ public class CarDao {
 		return instance;
 	}
 	
+	public List<CarResponseDto> findReservedCarById(String id) {
+		List<CarResponseDto> list = new ArrayList<>();
+
+		conn = DBManager.getConnection();
+		String sql = "SELECT c.car_num, c.car_name, c.car_brand, c.car_img, c.size, c.price, c.country, c.year, c.fuel, c.limit_age, c.limit_period FROM reservation r JOIN car c ON r.car_num=c.car_num WHERE r.id=?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				int car_num = rs.getInt(1);
+				String car_name = rs.getString(2);
+				String car_brand = rs.getString(3);
+				String car_img = rs.getString(4);
+				String size = rs.getString(5);
+				int price = rs.getInt(6);
+				String country = rs.getString(7);
+				int year = rs.getInt(8);
+				String fuel = rs.getString(9);
+				int limit_age = rs.getInt(10);
+				int limit_period = rs.getInt(11);
+
+				CarResponseDto car = new CarResponseDto(car_num, car_name, car_brand, car_img, size, price, country,
+						year, fuel, limit_age, limit_period);
+				list.add(car);
+			}
+		} catch (
+
+		SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+
+		return list;
+
+	}
+	
 	public List<CarResponseDto> findCarWithPageNumber(int page) {
 		List<CarResponseDto> list = new ArrayList<CarResponseDto>();
 

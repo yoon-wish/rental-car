@@ -16,6 +16,16 @@ public class ReservationResponseDto {
 		this.car_num = car_num;
 		this.rent_start = rent_start;
 		this.rent_end = rent_end;
+		this.rent_period = rent_period;
+		this.status = status;
+	}
+	
+	public ReservationResponseDto(String rent_start, String rent_end, int rent_period, String status) {
+		super();
+		
+		this.rent_start = rent_start;
+		this.rent_end = rent_end;
+		this.rent_period = rent_period;
 		this.status = status;
 	}
 
