@@ -20,13 +20,31 @@ public class ReservationResponseDto {
 		this.status = status;
 	}
 	
-	public ReservationResponseDto(String rent_start, String rent_end, int rent_period, String status) {
+	public ReservationResponseDto(int car_num, String rent_start, String rent_end, int rent_period, String status) {
 		super();
 		
+		this.car_num = car_num;
 		this.rent_start = rent_start;
 		this.rent_end = rent_end;
 		this.rent_period = rent_period;
 		this.status = status;
+	}
+	
+	public ReservationResponseDto(String id, String rent_start, String rent_end, int rent_period) {
+		super();
+		
+		this.id = id;
+		this.rent_start = rent_start;
+		this.rent_end = rent_end;
+		this.rent_period = rent_period;
+	}
+	
+	public ReservationResponseDto(Reservation reservation) {
+		this.id=reservation.getId();
+		this.rent_start = reservation.getRent_start();
+		this.rent_end = reservation.getRent_end();
+		this.rent_period = reservation.getRent_period();
+		this.status=reservation.getStatus();
 	}
 
 	public String getId() {

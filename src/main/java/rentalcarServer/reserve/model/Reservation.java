@@ -34,6 +34,24 @@ public class Reservation {
 		this.status = status;
 	}
 	
+	public Reservation(String id, int car_num, String rent_start, String rent_end) {
+		super();
+		
+		this.id =id;
+		this.car_num = car_num;
+		this.rent_start = rent_start;
+		this.rent_end = rent_end;
+	}
+	
+	public Reservation(String id, String rent_start, String rent_end, int rent_period, String status) {
+		super();
+		
+		this.id =id;
+		this.rent_start = rent_start;
+		this.rent_end = rent_end;
+		this.status = status;
+	}
+	
 	public String getId() {
 		return id;
 	}

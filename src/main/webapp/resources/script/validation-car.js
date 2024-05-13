@@ -84,3 +84,53 @@ const btnOpenModal = document.querySelector('.open-modal');
 btnOpenModal.addEventListener("click", () => {
 	modal.style.display = "flex";
 });
+
+
+// 수정하기
+
+function toggleReservationForm(buttonIndex) {
+	// 버튼을 클릭한 인덱스에 해당하는 수정 폼을 가져옴
+	var form = document.getElementById("reservationForm" + buttonIndex);
+	// 폼을 토글하여 보이거나 숨김
+	form.style.display = (form.style.display === "none") ? "block" : "none";
+
+	let start = document.getElementById('start' + buttonIndex);
+	let end = document.getElementById('end' + buttonIndex);
+
+	let today = new Date().toISOString().split('T')[0];
+	start.setAttribute('min', today);
+	end.setAttribute('min', today);
+
+	/*let price = $('#price').text();
+	let price2 = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+	$('#price').text(price2);*/
+
+
+	// 대여일(input id="start")의 변경 이벤트 리스너 추가
+	start.addEventListener('change', function() {
+		// 대여일
+		let startDate = new Date(start.value);
+		// 반납일
+		let endDate = new Date(end.value);
+
+		// 대여일 이후의 날짜만 선택 가능하도록 반납일 설정
+		if (startDate > endDate) {
+			end.value = start.value;
+		}
+		// 반납일의 최소값을 대여일로 설정
+		end.min = start.value;
+	});
+
+	// 반납일(input id="end")의 변경 이벤트 리스너 추가
+	end.addEventListener('change', function() {
+		// 대여일
+		let startDate = new Date(start.value);
+		// 반납일
+		let endDate = new Date(end.value);
+
+		// 반납일 이전의 날짜가 선택되었다면, 대여일로 설정
+		if (endDate < startDate) {
+			start.value = document.end.value;
+		}
+	});
+}

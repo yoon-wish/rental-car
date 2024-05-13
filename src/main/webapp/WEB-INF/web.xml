@@ -11,6 +11,23 @@
 	<!-- Servlet mapping -->
 
 
+
+	<servlet>
+		<servlet-name>CancelReservationAction</servlet-name>
+		<servlet-class>rentalcarServer.reserve.controller.CancelReservationAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CancelReservationAction</servlet-name>
+		<url-pattern>/cancelReservation</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UpdateReservationAction</servlet-name>
+		<servlet-class>rentalcarServer.reserve.controller.UpdateReservationAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateReservationAction</servlet-name>
+		<url-pattern>/updateReservation</url-pattern>
+	</servlet-mapping>
 	<servlet>
 		<servlet-name>ReserveListAction</servlet-name>
 		<servlet-class>rentalcarServer.reserve.controller.ReserveListAction</servlet-class>
@@ -328,7 +345,7 @@
 		<servlet-name>carByBrandForm</servlet-name>
 		<url-pattern>/brandForm</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>bookable</servlet-name>
 		<jsp-file>/views/reserve/bookable.jsp</jsp-file>
@@ -337,7 +354,16 @@
 		<servlet-name>bookable</servlet-name>
 		<url-pattern>/book</url-pattern>
 	</servlet-mapping>
-	
+
+	<servlet>
+		<servlet-name>reserveListForm</servlet-name>
+		<jsp-file>/views/reserve/reserveListForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>reserveListForm</servlet-name>
+		<url-pattern>/reserveList</url-pattern>
+	</servlet-mapping>
+
 	<servlet>
 		<servlet-name>limitAge</servlet-name>
 		<jsp-file>/views/reserve/limitAge.jsp</jsp-file>
@@ -346,8 +372,8 @@
 		<servlet-name>limitAge</servlet-name>
 		<url-pattern>/limitAge</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
+
+	<servlet>
 		<servlet-name>limitLicense</servlet-name>
 		<jsp-file>/views/reserve/limitLicense.jsp</jsp-file>
 	</servlet>
@@ -355,8 +381,8 @@
 		<servlet-name>limitLicense</servlet-name>
 		<url-pattern>/limitLicense</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
+
+	<servlet>
 		<servlet-name>limitReserve</servlet-name>
 		<jsp-file>/views/reserve/limitReserve.jsp</jsp-file>
 	</servlet>
@@ -364,16 +390,6 @@
 		<servlet-name>limitReserve</servlet-name>
 		<url-pattern>/limitReserve</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
-		<servlet-name>reserveListForm</servlet-name>
-		<jsp-file>/views/reserve/reserveListForm.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>reserveListForm</servlet-name>
-		<url-pattern>/reserveList</url-pattern>
-	</servlet-mapping>
-	
 
 
 

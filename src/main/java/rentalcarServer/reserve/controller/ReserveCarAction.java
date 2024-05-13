@@ -65,7 +65,7 @@ public class ReserveCarAction extends HttpServlet {
 		String rent_start = request.getParameter("start");
 		String rent_end = request.getParameter("end");
 		int rent_period = 0;
-		String status = "complete";
+		String status = "예약완료";
 
 		CarDao carDao = new CarDao();
 		
